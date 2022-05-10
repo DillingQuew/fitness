@@ -1,0 +1,76 @@
+// -------------news 
+.heading{
+    h3{
+        font-family: "Roboto-Bold";
+        font-size: 20px;
+        text-transform: uppercase;
+        line-height:76px;
+        margin-bottom: 35px;
+        text-align: center;
+    }
+    border-radius: 15px;
+    border: 1px solid #8F8F8F;
+    width: 240px;
+    height: 76px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+.block{
+    background-color: #fff;
+    position:relative;
+    padding-top: 35px;
+    padding-bottom: 15px;
+    margin-bottom: 131px;
+}
+
+
+.block-content{
+    display: flex;
+    .text__content{
+        width: 500px;
+        flex-grow: 1;
+        margin-left: 10%;
+        margin-right: 10%;
+        p{
+            width: 547px;
+            font-size: 20px;
+            line-height: 25px;
+        }
+    }
+    img{
+        margin-left: 69px;
+        border-radius: 37px;
+        flex-grow:0;
+    }
+}
+#more{
+ border:1px solid #8F8F8F; 
+ background-color: #FFFFFF;
+ display:flex;
+ justify-content: space-between;
+ border-radius: 35px;
+ padding-left:17px;
+ padding-right:17px;
+ width: 139px;
+ margin-left: auto;
+ margin-right: auto;
+ height:49px;
+ margin-top: 56px;
+ img{
+    margin-top: 11px;
+ }
+}
+//-------------about us
+.as-text {
+    h4{
+        font-weight: bold;
+        text-align: start;
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    position: absolute;
+    right:0;
+    bottom: 35%;
+}

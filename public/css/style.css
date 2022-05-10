@@ -1,0 +1,65 @@
+:root{
+    --bgc-for-card:#F3F3F3;
+    --itm-header:#cc3399;
+}
+.main-colors{
+    /*filter: invert(100%) sepia(2%) saturate(4%) hue-rotate(18deg) brightness(103%) contrast(100%);*/
+    /*filter: invert(9%) sepia(95%) saturate(5655%) hue-rotate(287deg) brightness(96%) contrast(115%);*/
+    filter: invert(25%) sepia(84%) saturate(1963%) hue-rotate(295deg) brightness(96%) contrast(87%);
+}
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    max-width:1000px;
+    z-index:1000;
+    padding:0;
+    margin-left: auto;
+    margin-right: auto;
+}
+.background-back{
+    /*background: rgb(255,255,255);*/
+    /*background: linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(255,98,245,1) 43%, rgba(255,247,133,1) 80%);*/
+
+    /*background: rgb(255,255,255);*/
+    /*background: linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(255,168,250,1) 0%, rgba(255,248,143,1) 100%);*/
+
+    background: rgb(255,189,251);
+    background: linear-gradient(50deg, rgba(255,189,251,1) 40%, rgba(255,250,166,1) 100%);
+
+}
+.glass{
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow:0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+.glasses-borders{
+    border-radius: 20px;
+    border: 5px solid var(--bgc-for-card);
+}
+.button-custom{
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8px;
+}
+.filter_title{
+    text-align: center;
+}
+table{
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+table tr{
+    border-bottom:black;
+    background:white;
+}

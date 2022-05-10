@@ -1,0 +1,76 @@
+.registration{
+    display: flex;
+    background-color: #fff;
+    width: 1195px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius:15px;
+    padding: 42px 39px;
+    margin-bottom:108px;
+}
+.registration-block{
+    h3{
+        line-height: 57px;
+        width: 594px;
+        height: 57px;
+        background-color: #E08686;
+        color:white;
+        border-radius: 15px;
+        text-align: center;
+        font-family: "Roboto-Regular";
+        font-size: 18px;
+        margin-bottom: 28px;
+    }
+    
+    width: 60%;
+    button{
+    line-height: 63px;
+    width: 340px;
+    height: 63px;
+    background-color: #76B179;
+    color:white;
+    border-radius: 15px;
+    text-align: center;
+    font-family: "Roboto-Bold";
+    font-size: 30px;
+    margin-left: 18%;
+    }
+}
+.terms-use{
+    &::-webkit-scrollbar{
+        margin-bottom: 10px;
+    }
+    overflow:scroll;
+    height: 450px;
+    width: 486px;
+    border-radius: 6px;
+    border: 1px solid rgb(175, 175, 175);
+    padding:16px 45px;
+    justify-content:space-between;
+    a{
+        font-family: "Roboto-Regular";
+        font-size: 16px;
+        line-height: 16px;
+        width: 100%;
+    }
+    span{
+        font-family: "Roboto-Regular";
+        font-size: 16px;
+        line-height: 16px;
+        text-align: justify;
+    }
+}
+.reg-fields{
+    display: block;
+    input{
+        height: 50px;
+        width: 597px;
+        border: 1px solid #2B2B2B;
+        border-radius: 15px;
+        text-align: center;
+        font-family: "Roboto-Regular";
+        font-size: 18px;
+        color:#2B2B2B;
+        margin-bottom: 21px;
+    }
+}
