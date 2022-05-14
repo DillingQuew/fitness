@@ -95,7 +95,7 @@
         </div>
     </nav>
 
-    <div class="py-4 container glass">
+    <div class="py-4 container">
         @yield('content')
     </div>
 </div>

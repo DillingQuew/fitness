@@ -6,7 +6,7 @@
     <h1>{{ $product->name }}</h1>
     <p>Цена: <b>{{ $product->price }}</b></p>
 
-    <img src="http://laravel-diplom-1.rdavydov.ru/storage/products/iphone_x.jpg">
+    <img class="card-img" src="{{Storage::url($product->image)}}">
     <p>{{$product->description}}</p>
     <form action="{{ route('basket-add', $product) }}" method="POST">
         <button type="submit" class="btn btn-primary" role="button">В корзину</button>

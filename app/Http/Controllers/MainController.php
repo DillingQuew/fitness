@@ -45,5 +45,8 @@ class MainController extends Controller
         $product = Product::byCode($productCode)->first();
         return view('product', ['product'=>$product]);
     }
-
+    public function about(){
+        $products = Product::latest()->take(5)->get();
+        return view('about', compact('products'));
+    }
 }

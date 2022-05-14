@@ -48,7 +48,7 @@ Route::middleware(['auth'])->group(function () {
 
 Route::get('/', 'MainController@index')->name('index');
 Route::get('/categories', 'MainController@categories')->name('categories');
-
+Route::get('/about', 'MainController@about')->name('about');
 
 Route::group(['prefix' => 'basket'], function () {
     Route::post('/add/{id}', 'BasketController@basketAdd')->name('basket-add');
