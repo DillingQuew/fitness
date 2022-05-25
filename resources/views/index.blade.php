@@ -19,6 +19,7 @@
         </div>
 
 
+        <div><div><div></div></div></div>
 
         <div class="card glass p-3 d-inline-block w-100 mb-2" style="">
             <h2 class="filter_title" >Фильтры</h2>

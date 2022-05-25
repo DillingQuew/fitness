@@ -3,7 +3,6 @@
 @section('title', 'Главная')
 
 @section('content')
-    <script src="../chief-slider.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             new ChiefSlider('.slider', {
@@ -15,16 +14,13 @@
         });
     </script>
 
-    <div class="py-4 row">
-     <span>
-         <h2>О нас</h2>
-     </span>
-
+    <div class="">
         <div class="container glass m-1">
-            <div class="p-5">
+            <h1 class="filter_title mt-3">О нас</h1>
+            <div class="">
                 <div class="slider" data-slider="chiefslider">
                     <div class="slider__container">
-                        <div class="slider__wrapper">
+                        <div class="slider__wrapper m-3 p-2">
                             <div class="slider__items">
                                 @foreach($products as $product)
                                     @include('layouts.card-slider', compact('product'))
@@ -32,86 +28,60 @@
                             </div>
                         </div>
                     </div>
-                    <a href="#" class="slider__control" data-slide="prev"></a>
-                    <a href="#" class="slider__control" data-slide="next"></a>
-                    <ol class="slider__indicators">
-                        <li data-slide-to="0"></li>
-                        <li data-slide-to="1"></li>
-                        <li data-slide-to="2"></li>
-                        <li data-slide-to="3"></li>
-                    </ol>
+
+                    <div>
+                        <a href="#" class="slider__control" data-slide="prev"></a>
+                        <a href="#" class="slider__control" data-slide="next"></a>
+                        <ol class="slider__indicators">
+                            <li data-slide-to="0"></li>
+                            <li data-slide-to="1"></li>
+                            <li data-slide-to="2"></li>
+                            <li data-slide-to="3"></li>
+                        </ol>
+                    </div>
+
                 </div>
-
             </div>
-
         </div>
-        <div class="glass">
-            <div>
-                <img src="public/images/logo.png" alt="" style="width: 150px">
-            </div>
-            <div>
 
+        <div class="glass container-sm p-3 m-1">
+            <div class="row-cols-2 justify-content-center">
+                <img src="public/images/logo_width.jpg" class="mw-100 card-img adaptive-img top-0" alt="" style="width: 300px">
+
+                    <span class="d-inline-block float-child p-2 adaptive-span card-text about-us-text">
+                        Мы те, кто дарит людям счастье своими руками... Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis minus nostrum unde.
+                        A blanditiis culpa eligendi in ipsam laudantium perspiciatis quaerat quibusdam! Assumenda et nam officiis
+                        perferendis perspiciatis placeat veritatis!
+                    </span>
             </div>
         </div>
     </div>
-{{--    <form method="GET" action="{{route("index")}}">--}}
+    <div class="glass container-sm p-3 m-1">
+        <h2 class="filter_title mt-3">Мы в социальных сетях!</h2>
 
-{{--        <div class="card glass p-3 d-inline-block w-100 mb-2">--}}
-{{--            <h2 class="filter_title">Категории</h2>--}}
-{{--            --}}{{--            <button class="btn btn-success m-2" id="Digital" style="background-color:dodgerblue; border-color:dodgerblue;">Приставки</button>--}}
-{{--            @foreach($categories as $category)--}}
-{{--                <span class="w-25">--}}
-{{--                    <a class="button-custom m-2" id="" style="background-color:dodgerblue; border-color:dodgerblue;" href="{{ route('category', $category->code) }}">--}}
-{{--                        {{ $category->name }}--}}
-{{--                    </a>--}}
-{{--                </span>--}}
-{{--            @endforeach--}}
-{{--        </div>--}}
-
-
-
-{{--        <div class="card glass p-3 d-inline-block w-100 mb-2" style="">--}}
-{{--            <h2 class="filter_title" >Фильтры</h2>--}}
-{{--            <span class="">--}}
-{{--                <label for="price_from">Цена от--}}
-{{--                    <input type="text" name="price_from" id="price_from" size="6" value="{{ request()->price_from}}">--}}
-{{--                </label>--}}
-{{--                <label for="price_to">до--}}
-{{--                    <input type="text" name="price_to" id="price_to" size="6"  value="{{ request()->price_to }}">--}}
-{{--                </label>--}}
-{{--            </span>--}}
-
-{{--            <span class="">--}}
-{{--                <label for="hit">--}}
-{{--                    <input type="checkbox" name="hit" id="hit" @if(request()->has('hit')) checked @endif> Хит--}}
-{{--                </label>--}}
-{{--            </span>--}}
-
-{{--            <span class="">--}}
-{{--                <label for="new">--}}
-{{--                    <input type="checkbox" name="new" id="new" @if(request()->has('new')) checked @endif> Новинка--}}
-{{--                </label>--}}
-{{--            </span>--}}
-
-{{--            <span class="">--}}
-{{--                <label for="recommend">--}}
-{{--                    <input type="checkbox" name="recommend" id="recommend" @if(request()->has('recommend')) checked @endif> Рекомендуем--}}
-{{--                </label>--}}
-{{--            </span>--}}
-
-{{--            <span class="">--}}
-{{--                <button type="submit" class="btn btn-primary">Фильтр</button>--}}
-{{--                <a href="{{ route("index") }}" class="btn btn-warning">Сброс</a>--}}
-{{--            </span>--}}
-
-
-{{--        </div>--}}
-{{--    </form>--}}
-{{--    <div class="py-4 row">--}}
-{{--        @foreach($products as $product)--}}
-{{--            @include('layouts.card', compact('product'))--}}
-{{--        @endforeach--}}
-{{--    </div>--}}
-{{--    {{ $products->links() }}--}}
+        <div class="d-flex justify-content-around social-networks">
+            <h3>Присоединяйтесь к нам </h3>
+            <ul class="navbar-nav d-inline float-left">
+                <li class="nav-item d-inline">
+                    <a href="https://vk.com/bazdareva_e" class="btn-link" style="text-decoration: none;">
+                        <img src="/images/svg/vk.svg" alt="My SVG Icon" style="width: 50px; padding:0;">
+                        ВКонтакте
+                    </a>
+                </li>
+                <li class="nav-item d-inline">
+                    <a href="https://vk.com/bazdareva_e" class="btn-link" style="text-decoration: none;">
+                        <img src="/images/svg/telega.svg" alt="My SVG Icon" style="width: 50px; padding:0;">
+                        Telegram
+                    </a>
+                </li>
+                <li class="nav-item d-inline">
+                    <a href="https://vk.com/bazdareva_e" class="btn-link" style="text-decoration: none;">
+                        <img src="/images/svg/telega2.svg" alt="My SVG Icon" style="width: 50px; padding:0;">
+                        Instagram
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
 
 @endsection

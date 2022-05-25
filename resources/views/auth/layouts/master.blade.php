@@ -29,13 +29,13 @@
                 {{--                    {{ config('app.name', 'Laravel') }}--}}
                 {{--                    min-width: 20px; min-height: 20px; border: 2px solid black; border-radius: 20px;--}}
                 <div class="">
-                    <img src="/public/images/logo.png" alt="" style="width: 100px">
+                    <img src="/images/logo.png" alt="" style="width: 100px">
                     {{--                            <h1 style="margin:5px; color: white">СКАЗКА</h1>--}}
                 </div>
             </a>
             <button class="navbar-toggler main-colors" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}" style="padding:0px 5px 5px 0px;">
                     <span class="navbar-toggler-icon">
-                         <img src="public/images/svg/list-menu-hand-drawn-symbol-of-three-thin-rectangles-outlines-svgrepo-com.svg" alt="My SVG Icon" style="width: 35px; padding:0;">
+                         <img src="/images/svg/list-menu-hand-drawn-symbol-of-three-thin-rectangles-outlines-svgrepo-com.svg" alt="My SVG Icon" style="width: 35px; padding:0;">
                     </span>
             </button>
 
@@ -63,14 +63,14 @@
                         <li class="nav-item">
 
                             <a class="nav-link" href="{{ route('login') }}" style="color: #cc3399;">
-                                <img class="main-colors" src="public/images/svg/next-user-hand-drawn-interface-symbol-svgrepo-com.svg" alt="My SVG Icon" style="width: 25px;">
+                                <img class="main-colors" src="/images/svg/next-user-hand-drawn-interface-symbol-svgrepo-com.svg" alt="My SVG Icon" style="width: 25px;">
                                 Войти
                             </a>
                         </li>
                         <li class="nav-item">
 
                             <a class="nav-link" href="{{ route('register') }}" style="color: #cc3399;">
-                                <img class="main-colors" src="public/images/svg/users-couple-hand-drawn-outlines-svgrepo-com.svg" alt="My SVG Icon" style="width: 25px;">
+                                <img class="main-colors" src="/images/svg/users-couple-hand-drawn-outlines-svgrepo-com.svg" alt="My SVG Icon" style="width: 25px;">
                                 Зарегистрироваться
                             </a>
                         </li>

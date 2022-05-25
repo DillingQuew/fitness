@@ -1,5 +1,5 @@
 {{--<div class="col-sm-6 col-md-4 " style="">--}}
-<div class="slider__item">
+<div class="slider__item text-center">
     <div class="m-1">
         <div class="position-relative glass card p-2">
             <div class="labels badge_menu">

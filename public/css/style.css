@@ -56,16 +56,73 @@ header{
     text-align: center;
 }
 table{
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    /*border: 1px solid rgba(255, 255, 255, 0.18);*/
+    box-shadow:0 8px 32px 0 rgba(0, 0, 0, 0.37);
+
+    /*border: black;*/
+    /*border-radius: 20px;*/
+    /*border: 1px solid rgba(255, 255, 255, 0.18);*/
 }
-table tr{
-    border-bottom:black;
-    background:white;
+table * {
+    border:none;
+    /*background:white;*/
+}
+table td{
+    border:none;
+}
+.page-item{
+    margin-left: 3px; !important;
+    margin-right: 3px; !important;
+}
+.page-link{
+    border: 1px solid pink !important;
+    border-radius:100%  !important;
+    padding:3px 10px 3px 10px !important;
+    /*padding-left:10px !important;*/
+    /*padding-right:10px !important;*/
+}
+@media(max-width:350px){
+.social-networks{
+    display:block !important;
+}
 }
 .badge_menu {
     position: absolute;
 }
+.float-container {
+    display: grid;
+    grid-template: 1fr / 1fr;
+    /*place-items: center;*/
+    /*border: 3px solid #fff;*/
+    /*padding: 20px;*/
+    /*min-height: 300px;*/
+    /*display:flex;*/
+}
+.float-container > * {
+    grid-column: 1 / 1;
+    grid-row: 1 / 1;
+}
+
+.float-child {
+    /*flex: 1;*/
+    text-align: justify;
+    min-width: 50%;
+    /*float: left;*/
+    /*padding: 20px;*/
+    /*border: 2px solid red;*/
+}
+.about-us-text{
+    font-size: medium;
+    box-sizing: content-box;
+
+}
+
+
+/*!*Media*!/////////////////////////////*/
 @media (min-width: 1200px) {
     .container {
         max-width: 1050px;
@@ -75,8 +132,8 @@ table tr{
 
 .slider__wrapper {
     overflow: hidden;
-    margin-left: -5px;
-    margin-right: -5px;
+    /*margin-left: -5px;*/
+    /*margin-right: -5px;*/
 }
 
 .slider__item {
@@ -95,6 +152,20 @@ table tr{
     .slider__item {
         flex: 0 0 33.3333333333%;
         max-width: 33.3333333333%;
+    }
+}
+
+@media (max-width: 1000px){
+   .adaptive-span{
+        width:100%; !important
+        display: block;
+       margin-left: auto;
+       margin-right: auto
+    }
+    .adaptive-img{
+        display: block !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
     }
 }
 
@@ -171,7 +242,9 @@ table tr{
     margin-left: 4px;
     line-height: 40px;
 }
-
+.slider__container{
+    overflow: visible;
+}
 .slider__control {
     background-color: unset;
 }
@@ -182,7 +255,7 @@ table tr{
 }
 
 .slider__indicators {
-    bottom: -35px;
+    /*bottom: -35px;*/
 }
 
 .slider__indicators li {
