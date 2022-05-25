@@ -60,7 +60,7 @@
         <h2 class="filter_title mt-3">Мы в социальных сетях!</h2>
 
         <div class="d-flex justify-content-around social-networks">
-            <h3>Присоединяйтесь к нам </h3>
+            <h3>Можете связаться с нами через </h3>
             <ul class="navbar-nav d-inline float-left">
                 <li class="nav-item d-inline">
                     <a href="https://vk.com/bazdareva_e" class="btn-link" style="text-decoration: none;">
@@ -75,7 +75,7 @@
                     </a>
                 </li>
                 <li class="nav-item d-inline">
-                    <a href="https://vk.com/bazdareva_e" class="btn-link" style="text-decoration: none;">
+                    <a href="https://www.instagram.com@skazka_nikitina/" class="btn-link" style="text-decoration: none;">
                         <img src="/images/svg/telega2.svg" alt="My SVG Icon" style="width: 50px; padding:0;">
                         Instagram
                     </a>

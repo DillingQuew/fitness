@@ -9,7 +9,7 @@
                 <div class="panel">
                     <h1>Заказ №{{ $order->id }}</h1>
                     <p>Заказчик: <b>{{ $order->name }}</b></p>
-                    <p>Номер теелфона: <b>{{ $order->phomne }}</b></p>
+                    <p>Номер теелфона: <b>{{ $order->phone }}</b></p>
                     <table class="table table-striped">
                         <thead>
                         <tr>
@@ -29,7 +29,7 @@
                                         {{ $product->name }}
                                     </a>
                                 </td>
-                                <td><span class="badge">1</span></td>
+                                <td><span class="form-label">{{ $product->pivot->count }} шт.</span></td>
                                 <td>{{ $product->price }} руб.</td>
                                 <td>{{ $product->getPriceForCount()}} руб.</td>
                             </tr>

@@ -93,6 +93,16 @@ table td{
 .badge_menu {
     position: absolute;
 }
+.form-control{
+    border:none;
+    border-radius:0px !important;
+}
+.btn-plus-count{
+    border-radius: 0px 5px 5px 0px;
+}
+.btn-minus-count{
+    border-radius: 5px 0px 0px 5px;
+}
 .float-container {
     display: grid;
     grid-template: 1fr / 1fr;

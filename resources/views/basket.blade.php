@@ -24,18 +24,25 @@
                             {{ $product->name }}
                         </a>
                     </td>
-                    <td><span class="badge">{{ $product->pivot->count }}</span>
+                    <td>
                         <div class="btn-group form-inline">
                             <form action="{{ route('basket-remove', $product) }}" method="POST">
-                                <button type="submit" class="btn btn-danger"
-                                        href=""><span
-                                        class="glyphicon glyphicon-minus" aria-hidden="true"></span></button>
+                                <button type="submit" class="btn btn-danger btn-minus-count btn-number" data-type="minus" data-field="quant[1]">
+                                    <span class="glyphicon glyphicon-plus" aria-hidden="true">
+                                        -
+                                    </span>
+                                </button>
                                 @csrf
                             </form>
+
+                            <span class="form-control ">{{ $product->pivot->count }}</span>
+
                             <form action="{{ route('basket-add', $product) }}" method="POST">
-                                <button type="submit" class="btn btn-success"
-                                        href=""><span
-                                        class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
+                                <button type="submit" class="btn btn-success btn-plus-count btn-number" data-type="plus" data-field="quant[1]">
+                                    <span class="glyphicon glyphicon-plus" aria-hidden="true">
+                                        +
+                                    </span>
+                                </button>
                                 @csrf
                             </form>
                         </div>
