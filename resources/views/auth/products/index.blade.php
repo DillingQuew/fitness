@@ -5,51 +5,60 @@
 @section('content')
     <div class="col-md-12">
         <h1>Товары</h1>
-        <table class="table">
-            <tbody>
-            <tr>
-                <th>
-                    #
-                </th>
-                <th>
-                    Код
-                </th>
-                <th>
-                    Название
-                </th>
-                <th>
-                    Категория
-                </th>
-                <th>
-                    Цена
-                </th>
-                <th>
-                    Действия
-                </th>
-            </tr>
-            @foreach($products as $product)
+        @if($products->isEmpty())
+            <p>Тут пока ничего нет</p>
+        @elseif($products->isEmpty()==false)
+
+        <div class="glass mb-3" style="overflow-x: auto;">
+            <table class="table">
+                <tbody>
                 <tr>
-                    <td>{{ $product->id}}</td>
-                    <td>{{ $product->code }}</td>
-                    <td>{{ $product->name }}</td>
-                    <td>{{ $product->category->name }}</td>
-                    <td>{{ $product->price }}</td>
-                    <td>
-                        <div class="btn-group" role="group">
-                            <form action="{{ route('products.destroy', $product) }}" method="POST">
-                                <a class="btn btn-success" type="button"
-                                   href="{{ route('products.show', $product) }}">Открыть</a>
-                                <a class="btn btn-warning" type="button"
-                                   href="{{ route('products.edit', $product) }}">Редактировать</a>
-                                @csrf
-                                @method('DELETE')
-                                <input class="btn btn-danger" type="submit" value="Удалить"></form>
-                        </div>
-                    </td>
+                    <th>
+                        #
+                    </th>
+                    <th>
+                        Код
+                    </th>
+                    <th>
+                        Название
+                    </th>
+                    <th>
+                        Категория
+                    </th>
+                    <th>
+                        Цена
+                    </th>
+                    <th>
+                        Действия
+                    </th>
                 </tr>
-            @endforeach
-            </tbody>
-        </table>
+
+                    @foreach($products as $product)
+                        <tr>
+                            <td>{{ $product->id}}</td>
+                            <td>{{ $product->code }}</td>
+                            <td>{{ $product->name }}</td>
+                            <td>{{ $product->category->name }}</td>
+                            <td>{{ $product->price }}</td>
+                            <td>
+                                <div class="btn-group" role="group">
+                                    <form action="{{ route('products.destroy', $product) }}" method="POST">
+                                        <a class="btn btn-success" type="button"
+                                           href="{{ route('products.show', $product) }}">Открыть</a>
+                                        <a class="btn btn-warning" type="button"
+                                           href="{{ route('products.edit', $product) }}">Редактировать</a>
+                                        @csrf
+                                        @method('DELETE')
+                                        <input class="btn btn-danger" type="submit" value="Удалить"></form>
+                                </div>
+                            </td>
+                        </tr>
+                    @endforeach
+                @endif
+                </tbody>
+            </table>
+        </div>
+
         {{ $products->links() }}
         <a class="btn btn-success" type="button" href="{{ route('products.create') }}">Добавить товар</a>
     </div>

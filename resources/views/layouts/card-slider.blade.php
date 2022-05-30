@@ -1,7 +1,7 @@
 {{--<div class="col-sm-6 col-md-4 " style="">--}}
 <div class="slider__item text-center">
     <div class="m-1">
-        <div class="position-relative glass card p-2">
+        <div class="position-relative glass card p-2" style="box-shadow: none;">
             <div class="labels badge_menu">
                 @if($product->isNew())
                     <span class="badge rounded-pill bg-warning text-dark">Новинка</span>
@@ -16,7 +16,7 @@
                 @endif
             </div>
             <img class="card-img" src="{{Storage::url($product->image)}}" alt="Тут должна быть картинка" style="width: 100%;">
-            <div class="card-body" style="color:black; background-color: var(--bgc-for-card); border-radius:5px; width:100%; padding:0;">
+            <div class="card-body p-2" style="color:black; background-color: var(--bgc-for-card); border-radius:5px; width:100%; padding:0;">
                 <span class="card-text text-center d-block">
                     <h3>{{ $product->name }}</h3>
                     <p class="card-text text-center m-0">{{ $product->price }} руб.</p>

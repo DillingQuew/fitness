@@ -7,7 +7,7 @@
 @endisset
 
 @section('content')
-    <div class="col-md-12">
+    <div class="col-md-12 glass p-3">
         @isset($category)
             <h1>Редактировать Категорию <b>{{ $category->name }}</b></h1>
                 @else
@@ -19,8 +19,7 @@
                       action="{{ route('categories.update', $category) }}"
                       @else
                       action="{{ route('categories.store') }}"
-                    @endisset
-                >
+                    @endisset>
                     <div>
                         @isset($category)
                             @method('PUT')
@@ -59,14 +58,14 @@
                             </div>
                         </div>
                         <br>
-                        <div class="input-group row">
-                            <label for="image" class="col-sm-2 col-form-label">Картинка: </label>
-                            <div class="col-sm-10">
-                                <label class="btn btn-default btn-file">
-                                    Загрузить <input type="file" style="display: none;" name="image" id="image">
-                                </label>
-                            </div>
-                        </div>
+{{--                        <div class="input-group row">--}}
+{{--                            <label for="image" class="col-sm-2 col-form-label">Картинка: </label>--}}
+{{--                            <div class="col-sm-10">--}}
+{{--                                <label class="btn btn-default btn-file">--}}
+{{--                                    Загрузить <input type="file" style="display: none;" name="image" id="image">--}}
+{{--                                </label>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
                         <button class="btn btn-success">Сохранить</button>
                     </div>
                 </form>

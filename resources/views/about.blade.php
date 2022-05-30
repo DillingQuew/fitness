@@ -15,8 +15,27 @@
     </script>
 
     <div class="">
-        <div class="container glass m-1">
-            <h1 class="filter_title mt-3">О нас</h1>
+        <div class="container glass p-3 m-1">
+            <h1 class="filter_title  ">О нас</h1>
+{{--            <img class="" src="public/images/logo_width.jpg" alt="logo" style="width: 300px; ">--}}
+            <div class="" style="">
+                Покупатель имеет возможность в живую пообщаться с мастером, узнать его как человека, личность и
+                подробно расспросить о самом изделии, его характерных особенностях и «волшебных» свойствах.
+                <br>
+                Кропотливо прорабатываются все детали – цвет, форма, объем, сочетания и сопутствующие материалы
+                (фурнитура, камни, стразы, блестки и другие). Не случайно Коко Шанель предпочитала именно ручной труд.
+                <br>
+                Время, затрачиваемое мастером на свой труд – бесценно.
+                Огромный, многолетний опыт, поиск и проверка используемого материала,
+                изучение несметного количества информации, повышение квалификации на тренингах и
+                мастер-классах, разработка авторского стиля и бренда и, конечно же, моменты Творческого Вдохновения
+                – они не приходят на заказ и в одно мгновение!
+                <br>
+                <p class="text-center">Предлагаем вам оценить послдение работы мастера</p>
+            </div>
+        </div>
+
+        <div class="glass p-3 m-1">
             <div class="">
                 <div class="slider" data-slider="chiefslider">
                     <div class="slider__container">
@@ -37,49 +56,37 @@
                             <li data-slide-to="1"></li>
                             <li data-slide-to="2"></li>
                             <li data-slide-to="3"></li>
+                            <li data-slide-to="4"></li>
                         </ol>
                     </div>
 
                 </div>
             </div>
         </div>
-
-        <div class="glass container-sm p-3 m-1">
-            <div class="row-cols-2 justify-content-center">
-                <img src="public/images/logo_width.jpg" class="mw-100 card-img adaptive-img top-0" alt="" style="width: 300px">
-
-                    <span class="d-inline-block float-child p-2 adaptive-span card-text about-us-text">
-                        Мы те, кто дарит людям счастье своими руками... Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis minus nostrum unde.
-                        A blanditiis culpa eligendi in ipsam laudantium perspiciatis quaerat quibusdam! Assumenda et nam officiis
-                        perferendis perspiciatis placeat veritatis!
-                    </span>
-            </div>
-        </div>
     </div>
+
     <div class="glass container-sm p-3 m-1">
         <h2 class="filter_title mt-3">Мы в социальных сетях!</h2>
 
         <div class="d-flex justify-content-around social-networks">
-            <h3>Можете связаться с нами через </h3>
+            <h3>Свяжитесь с нами через </h3>
             <ul class="navbar-nav d-inline float-left">
                 <li class="nav-item d-inline">
                     <a href="https://vk.com/bazdareva_e" class="btn-link" style="text-decoration: none;">
-                        <img src="/images/svg/vk.svg" alt="My SVG Icon" style="width: 50px; padding:0;">
+                        <img class="m-1" src="/images/svg/vk.svg" alt="My SVG Icon" style="width: 50px; padding:0;">
                         ВКонтакте
                     </a>
                 </li>
                 <li class="nav-item d-inline">
-                    <a href="https://vk.com/bazdareva_e" class="btn-link" style="text-decoration: none;">
-                        <img src="/images/svg/telega.svg" alt="My SVG Icon" style="width: 50px; padding:0;">
-                        Telegram
-                    </a>
+                        <img class="m-1" src="/images/svg/whatsapp.svg" alt="My SVG Icon" style="width: 50px; padding:0;">
+                        +7 908 804-96-78
                 </li>
-                <li class="nav-item d-inline">
-                    <a href="https://www.instagram.com@skazka_nikitina/" class="btn-link" style="text-decoration: none;">
-                        <img src="/images/svg/telega2.svg" alt="My SVG Icon" style="width: 50px; padding:0;">
-                        Instagram
-                    </a>
-                </li>
+{{--                <li class="nav-item d-inline">--}}
+{{--                    <a href="https://www.instagram.com@skazka_nikitina/" class="btn-link" style="text-decoration: none;">--}}
+{{--                        <img src="/images/svg/instagram.svg" alt="My SVG Icon" style="width: 50px; padding:0;">--}}
+{{--                        Instagram--}}
+{{--                    </a>--}}
+{{--                </li>--}}
             </ul>
         </div>
     </div>
