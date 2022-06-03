@@ -1,83 +1,57 @@
 @extends('layouts.master')
 @section('title', 'Главная')
 @section('content')
-    <form method="GET" action="{{route("index")}}">
-        <div class="card glass p-3 d-inline-block w-100 mb-2 overflow-auto">
-            <h2 class="filter_title">Категории</h2>
-            @foreach($categories as $category)
-                <span class="w-25">
-                    <a class="btn btn-dark m-1" id="" style="background-color:dodgerblue; border-color:dodgerblue;" href="{{ route('category', $category->code) }}">
-                        {{ $category->name }}
-                    </a>
-                </span>
-            @endforeach
+
+    <div class="starter-block " style="margin-left: auto; margin-right: auto; position:relative" >
+        <div class="container justify-content-sm-center py-4 pt-0 " >
+            <div class="p-1"
+                 style="margin-left: auto; position:absolute; bottom:0; left:0; right: 0;
+                margin-right: auto; background: black;
+                border:2px solid red;
+                /*border-bottom:none;*/
+                border-radius:20px 20px 0 0;">
+                <h1 class="p-2" style="text-align: center;font-weight: bold;">Пробное занятие в GYM - бесплатно!</h1>
+            </div>
+
+            <h2 class="glass-back p-2" style="max-width: 300px; min-width: 100px; padding-top: 20px;">
+                Всегда выбирайте
+                самый трудный путь — на нём вы не встретите конкурентов.
+                (Шарль де Голль)
+            </h2>
         </div>
 
-        <div class="card glass p-3 d-inline-block w-100 mb-2 shadow-drop-2-center overflow-auto">
-            <h2 class="filter_title" >Фильтры</h2>
-
-
-            <ul class="navbar-nav d-inline float-left filters p-0" style="list-style: none; width: 100%;">
-                <span class="d-inline fw-bold">Цена</span>
-                <li class="nav-item d-inline">
-                     <span class="">
-                        <label for="price_from">
-                            <input class="input-group" type="text" placeholder="От" name="price_from" id="price_from" size="6" value="{{ request()->price_from}}">
-                        </label>
-                          <label class="" for="price_to">
-                            <input class="input-group" type="text" placeholder="До "name="price_to" id="price_to" size="6"  value="{{ request()->price_to }}">
-                        </label>
-                    </span>
-                </li>
-
-                <span class="d-inline fw-bold">Группа</span>
-
-                <li class="nav-item d-inline">
-                    <span class="">
-                         <label for="hit">
-                            <input type="checkbox" class="custom-checkbox" name="hit" id="hit" @if(request()->has('hit')) checked @endif> Хит
-                        </label>
-                    </span>
-                </li>
-
-                <li class="nav-item d-inline">
-                    <span class="">
-                        <label for="new">
-                            <input type="checkbox"  class="custom-checkbox" name="new" id="new" @if(request()->has('new')) checked @endif> Новинка
-                        </label>
-                    </span>
-                </li>
-
-                <li class="nav-item d-inline">
-                     <span class="">
-                          <label for="recommend">
-                                <input type="checkbox"  class="custom-checkbox" name="recommend" id="recommend" @if(request()->has('recommend')) checked @endif> Рекомендуем
-                          </label>
-                    </span>
-                </li>
-
-                <li class="nav-item d-inline">
-                     <span class="">
-                        <button type="submit" class="btn btn-success m-1">Фильтр</button>
-                          <a href="{{ route("index") }}" class="btn btn-danger m-1">Сброс</a>
-                    </span>
-                </li>
-
-            </ul>
-        </div>
-    </form>
-    <div class="py-4 row pt-0">
-        @if($products->isEmpty())
-            <p class="glass text-center w-75 p-2 " style="margin-right: auto; margin-left: auto;">
-                Кажется, ничего не найдено...
-                <img src="/images/hz.png" alt="" style="width: 60px">
-            </p>
-        @elseif($products->isEmpty()==false)
-            @foreach($products as $product)
-                @include('layouts.card', compact('product'))
-            @endforeach
-        @endif
     </div>
-        {{ $products->links() }}
 
+    <div class="container justify-content-sm-center py-4 pt-3">
+        <h2>Хотите стать лучше?</h2>
+        <p>Но все время откладываете на завтра? С решением вашего вопроса помогут наши лучшие фитнес-тренера!</p>
+
+             <h2 class="text-center">
+                 <a  class="btn btn-danger" href="{{route('addOrder')}}">Записаться на первое бесплатное занятие
+                 </a>
+             </h2>
+
+
+    </div>
+
+    <div class="container justify-content-sm-center py-4 pt-0">
+        <div>
+            <div class="">
+                <div class="">
+                    <h3 class="text-center">КЛУБ GYM В ОМСКЕ</h3>
+                    <p>Адрес: ул. Лермонтова, 24</p>
+                    <p style="border-bottom:1px solid red;">График работы: с 10:00 до 22:00</p>
+                    <div class="resizer ugly">
+                        <iframe class="resized" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d809.5205995778514!2d73.37801136575803!3d54.97888568590797!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1654161207227!5m2!1sru!2sru"
+                                width="600" height="450"
+                                allowfullscreen=""
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
 @endsection

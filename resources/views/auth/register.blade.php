@@ -3,9 +3,9 @@
 @section('title', 'Регистрация')
 
 @section('content')
-    <div class="container">
-        <div class="row justify-content-center ">
-            <div class="col-md-8">
+<div class="container mt-3">
+    <div class="row justify-content-center ">
+        <div class="col-md-8">
             <div class="card glass">
                 <div class="card-header">Регистрация</div>
                     <div class="card-body">
@@ -60,7 +60,7 @@
                         </div>
                     </div>
                 </form>
-                    </div>
             </div>
         </div>
+    </div>
 @endsection

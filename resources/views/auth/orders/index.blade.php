@@ -5,7 +5,7 @@
 @section('content')
     <div class="col-md-12">
         <div class="mb-3 glass" style="overflow-x: auto">
-            <h1 class="m-2">Заказы</h1>
+            <h1 class="m-2">Заявки</h1>
             <table class="table">
                 <tbody>
                 <tr>
@@ -19,14 +19,11 @@
                         Телефон
                     </th>
                     <th>
-                        Когда отправлен
+                        Дата
                     </th>
-                    <th>
-                        Сумма
-                    </th>
-                    <th>
-                        Действия
-                    </th>
+{{--                    <th>--}}
+{{--                        Действия--}}
+{{--                    </th>--}}
                 </tr>
                 @foreach($orders as $order)
                     <tr>
@@ -34,16 +31,15 @@
                         <td>{{ $order->name }}</td>
                         <td>{{ $order->phone }}</td>
                         <td>{{ $order->created_at->format('H:i d/m/Y') }}</td>
-                        <td>{{ $order->calculateFullSum() }} руб.</td>
                         <td>
                             <div class="btn-group" role="group">
-                                <a class="btn btn-success" type="button"
-                                   @admin
-                                   href="{{ route('orders.show', $order) }}"
-                                   @else
-                                       href="{{ route('person.orders.show', $order) }}"
-                                    @endadmin
-                                >Открыть</a>
+{{--                                <a class="btn btn-success" type="button"--}}
+{{--                                   @admin--}}
+{{--                                   href="{{ route('orders.show', $order) }}"--}}
+{{--                                   @else--}}
+{{--                                       href="{{ route('person.orders.show', $order) }}"--}}
+{{--                                    @endadmin--}}
+{{--                                >Открыть</a>--}}
                             </div>
                         </td>
                     </tr>
@@ -52,6 +48,6 @@
             </table>
         </div>
 
-        {{ $orders->links() }}
+{{--        {{ $orders->links() }}--}}
     </div>
 @endsection

@@ -3,13 +3,13 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\Order;
+use App\Order;
 
 class OrderController extends Controller
 {
     public function index()
     {
-        $orders = Order::active()->paginate(10);
+        $orders = Order::paginate(10);
         return view('auth.orders.index', compact('orders'));
     }
 
